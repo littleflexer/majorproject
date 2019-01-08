@@ -3,7 +3,7 @@
 Oh boy end of semester one! I want to build an epic choose your own adventure.
 
 ## Need to have list
-- Storyline/Characters (embedded text if the Nice to Have videos don't work)
+- Storyline/Characters (embedded text if the Nice to Have videos don't work) //COOL AND GOOD
     - find a way to show the various 'chapters' of the story
 - User input (movie review code)
     - Hold answer in strings
