@@ -4,3 +4,4 @@ December 13th : Creating story on google docs. Almost done chapter two. This'll 
 December 19th: Finished basic story and the extra endings. Coding time!
 december 20th: Created a project folder as well as seperate files for each section in the story
 January 7th: Folder bug fixes and a start on user input.
+January 8th: Created images for choice buttons. Attempting to make the buttons and user input..., Begin plans of an array to hold the endings in.
