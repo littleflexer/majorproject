@@ -10,37 +10,42 @@ let choice1;
 let choice2;
 let phraseInput, analyseButton, analyseButton2;
 let result;
+let canvas;
 
 
 function preload(){
-  choice1 = loadImage("assets/Choice 1.png");
-  choice2 = loadImage("assets/Choice 2.png");
 }
 
 
 function setup(){
-  createCanvas(windowWidth, windowHeight);
-  background(255);
-  imageMode(CENTER);
-  image(choice1, windowWidth/4, windowHeight* (3/4), choice1.width, choice1.height);
-  image (choice2, windowWidth*(3/4), windowHeight* (3/4), choice2.width, choice2.height);
-  
+  let canvas = createCanvas(600, 600);
+  canvas.position(600, 100);
+
   phraseInput = createInput("");
   phraseInput.attribute("placeholder", "Enter a name!");
-  phraseInput.parent("phrase");
+  // phraseInput.parent("phrase");
 
   analyseButton = createButton(choice1);
   analyseButton.attribute("type", "button");  // note to self: button type instead of submit type
-  analyseButton.parent("phrase");
+  // analyseButton.parent("phrase");
 
   analyseButton2 = createButton(choice2);
   analyseButton2.attribute("type", "button");
-  analyseButton2.parent("phrase");
+  // analyseButton2.parent("phrase");
 
   result = createP();
-  result.parent("container");
+  // result.parent("container");
 }
 
 function draw() {
+  background(26, 78, 90);
+  imageMode(CENTER);
+  let choice1 = createImg("assets/Choice 1.png");
+  let choice2 = createImg("assets/Choice 2.png");
+  let body = createImg("assets/body.png");
 
+  body.size(100, 100);
+  choice1.position(350, 350);
+  choice2.position(650, 300);
+  body.position(825, 697);
 }
