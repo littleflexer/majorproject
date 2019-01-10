@@ -6,3 +6,4 @@ december 20th: Created a project folder as well as seperate files for each secti
 January 7th: Folder bug fixes and a start on user input.
 January 8th: Created images for choice buttons. Attempting to make the buttons and user input..., Begin plans of an array to hold the endings in.
 January 9th: I found p5.js/dom this will help me with user input and displaying the story. I also created my canvas and images. So that's nice. 
+January 10th: I have given up on the p5.js/dom and I'm gonna use just the basic javascript. It's okay though because I can still get user input. Yay
