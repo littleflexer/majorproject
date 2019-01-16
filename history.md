@@ -10,3 +10,4 @@ January 10th: I have given up on the p5.js/dom and I'm gonna use just the basic 
 January 11th: I got user input to finally work. But displaying text is actual hell. 
 January 14th: Text has been displayed. Next stop,,,,,,, choices!!! We got this boys.
 jan 15th: I have text in my code. Finished putting in true ending. now i gotta program it lol
+January 16th: Turns out I will need state variables. My goal is to do this afterschool and in my spares tomorrow before my presentation.
