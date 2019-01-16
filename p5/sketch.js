@@ -10,6 +10,7 @@ let choice2;
 let name;
 let trueArray = [];
 let endingsArray = [];
+let state = 1;
 
 
 
@@ -40,11 +41,33 @@ function setup(){
   let stepOutOfTheWay = ("You step out of the way and Snape rushes past you and towards the bridge. The centaur speaks in a wise tone, “Are you kids okay?” None of you respond. “Let me guide you to Dumbledore. I’ll explain everything” He says. The centaur proceeds to explain that unicorn blood has the ability to help you live forever, as evil as it may be, the hooded figure was taking advantage of that. You, your friends, and the centaur find Dumbledore waiting just inside the castle. “I have come to understand that you have seen somethings tonight that no children should ever see. I deeply apologize and actions will take place in order to bring justice. 10 points will be awarded to each of you for curiosity. Now off to bed,” He says in a soothing tone before vanishing deeper into the castle. True Ending: The next night, you sit at the tables in the great hall. Dumbledore announces to the school that Gilderoy Lockhart (Dad) will be the new potions master and Remus Lupin will be the new Defence Against the Dark Arts teacher.  Peace is temporarily restored in hogwarts and you are deemed a hero.");
   trueArray.push(stepOutOfTheWay);
 
+  let goHome = ("You decide to just walk home instead. You pass the climbing tree, the rusty bench, and all the usual sites. You get down to your street and enter the pink house in the corner. You go inside, she made you dinner. It’s spaghetti. You gladly eat the spaghetti and head to bed. Your story ends with you being a normal kid with a boring and normal life. But you got spaghetti. You love spaghetti.");
+  endingsArray.push(goHome);
+
+  let no = ("You tell that guy that you can find it on your own. You wander aimlessly through the train station. After hours of wandering, your dad comes and picks you up to bring you back home to your mother. You failed your father’s wish for you. This is so sad. Luckily, this is the first time mom and dad have seen each other in years. They embrace. Next thing you know, mom explains that she is aware of the wizarding world and will be more than happy to help you get into hogwarts next year. Dad makes the choice to move back in and your small family rejoices in reunion. They plan on officially getting married in city hall later that month. Yay.");
+  endingsArray.push(no);
+
+  let not = ("You mind your own business and you head back to the common room. The rest of the year goes on to be pretty normal, if you ignore that Dumbledore, Cedric, Lavender, and Pansy were brutally murdered by some guy named Voldemort. The year comes to an end and dad picks you up from the train station. He brings you home to your mother. He brought you a grilled cheese sandwich.");
+  endingsArray.push(not);
+
+  let staySafe = ("Nah that sounds stupid and not safe. Harry, Ron and a reluctant Hermione depart to follow Snape. You tell them that you’ll stay watch up here and make sure that nobody goes out of the common room. 20 minutes pass and Lavender Brown comes storming down, “Oh hello USERINPUTNAME. Was that you making all that noise earlier?”  “Yeah sorry, I, um, dropped some books,” You mumble back. “Right, so listen Neville, Dean, Seamus and I are sneaking out tonight. It’s not that I don’t trust you but… Petrificus Totalus!” You collapse to the ground, paralyzed and in shock. Lavender looks at you and says, “It’s not personal. You’ll be fine by morning!” The next day you find out that Lavender overheard Harry, Ron, and Hermione so she snuck out to warn Dumbledore. He was lucky enough to have had time to send help to the three of them and save them from certain death. Your dad is now the potions teacher which is cool,  but incredibly awkward.");
+  endingsArray.push(staySafe);
+
+  let standYourGround = ("Hermione pulls out her wand, “Expelliarmus!” Snape’s wand flies away. All this commotion causes the figure to come back, just then Harry collapses in pain. You can no longer hear anything other than the ringing in your ears. Flashes of green fly all around you, then everything goes black. You died.")
+  endingsArray.push(standYourGround);
+
   name = prompt("Type in a name");
 }
 
 function draw() {
   textSize(15);
+  if (state === 2){
+    let thisMessage = trueArray.shift();
+    text(thisMessage, windowWidth, windowHeight/3, 600, 600);
+  }
+  if (state === 3){
+
+  }
 }
 
 function keyPressed() {
@@ -53,17 +76,19 @@ function keyPressed() {
 
 function makeChoice() {
   let theMessage;
-  if (key === "1" || keyCode === "97"){
+  if (key === "1" || keyCode === "97" && state === 2){
     console.log("here!");
     let thisMessage = trueArray.shift();
     text(thisMessage, windowWidth, windowHeight/3, 600, 600);
+    let state === 2;
   }
   if (keyCode === "50" || keyCode === "98"){
 
   }
-  if (key === "r" || key === "R") {
+  if (key === "r" || key === "R" && state === 1) {
     let theMessage = "You are ten. Your birthday is in one week. You are out for a walk through the old neighbourhood park. You walk past the usual sites, the rusty bench, the climbing tree, and the old hill. You see the same old familiar faces doing the exact same things over and over again. But today something feels off. Since you are a complete idiot, you keep walking. You keep walking down the path. Your phone buzzes and it’s a text from your mom, Dory Lockhart. hey hun. it’s your turn to clean the dishes tonight. xoxo - mum . it’s a shame your father left her. she’s an incredibly sweet woman. you dont know why your mother refuses to talk about him. you decide not to reflect on your life and you keep walking.  the same old path, but this time with a shiver up your spine. the people you used recognize seem to disappear. you need to find an advantage point and fast. you look to your right and you see the old hill. you go up the hill and you see a grungy old boot. but that’s not why you came here.  so you turn around. there is literally no one left. it’s just you. so you look at the boot. there’s a bright letter beside the boot. it’s addressed to you, strangely. upon opening it, it bursts into the air howling at you. " +  name + " grAb tHat stInky boOT nOw! rigHt noW!! grab the boot 1 or go home 2";
     text(theMessage, windowWidth/3 , 50, 600, 600);
+    let state = 2;
 
   }
 }

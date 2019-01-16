@@ -22,11 +22,7 @@ You creep to the door and you open it up. Oh yeah! You styled your room like a m
 (Yes(1) or No(2))
 
 (2 in array2)
-	You tell that guy that you can find it on your own. You wander aimlessly through the train station. After hours of wandering, your dad comes and picks you up to bring you back home to your mother. You failed your father’s wish for you. This is so sad.
 
-Luckily, this is the first time mom and dad have seen each other in years. They embrace. Next thing you know, mom explains that she is aware of the wizarding world and will be more than happy to help you get into hogwarts next year.
-
-Dad makes the choice to move back in and your small family rejoices in reunion. They plan on officially getting married in city hall later that month. Yay.
 
 (2 in array1)
 
@@ -42,15 +38,6 @@ The year comes to an end and dad picks you up from the train station. He brings 
 (tag along(1) or stay safe(2))
 
 (4 in array2)
-Nah that sounds stupid and not safe. Harry, Ron and a reluctant Hermione depart to follow Snape. You tell them that you’ll stay watch up here and make sure that nobody goes out of the common room. 20 minutes pass and Lavender Brown comes storming down, “Oh hello USERINPUTNAME. Was that you making all that noise earlier?”
-
-“Yeah sorry, I, um, dropped some books,” You mumble back.
-
-“Right, so listen Neville, Dean, Seamus and I are sneaking out tonight. It’s not that I don’t trust you but… Petrificus Totalus!”
-
-You collapse to the ground, paralyzed and in shock. Lavender looks at you and says, “It’s not personal. You’ll be fine by morning!”
-
-The next day you find out that Lavender overheard Harry, Ron, and Hermione so she snuck out to warn Dumbledore. He was lucky enough to have had time to send help to the three of them and save them from certain death. Your dad is now the potions teacher which is cool,  but incredibly awkward.
 
 (4 in array1)
 
@@ -59,9 +46,7 @@ The next day you find out that Lavender overheard Harry, Ron, and Hermione so sh
 (5 in array2)
 You stand your ground and Snape sees you. “Crucio!” he hollars. You yell back in pain.
 
-Hermione pulls out her wand, “Expelliarmus!” Snape’s wand flies away. All this commotion causes the figure to come back, just then Harry collapses in pain. You can no longer hear anything other than the ringing in your ears. Flashes of green fly all around you, then everything goes black.
 
-You died.
 
 (5 in array1)
 	You step out of the way and Snape rushes past you and towards the bridge. The centaur speaks in a wise tone, “Are you kids okay?” None of you respond.
