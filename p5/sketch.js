@@ -66,7 +66,7 @@ function draw() {
   textSize(15);
   if (state === 2){
     let theMessage = trueArray.shift();
-    console.log(thisMessage);
+    console.log(theMessage);
     text(theMessage, windowWidth, windowHeight/3, 600, 600);
     endingsArray.shift();
   }
