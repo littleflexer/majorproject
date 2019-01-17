@@ -10,7 +10,7 @@ let choice2;
 let name;
 let trueArray = [];
 let endingsArray = [];
-let state;
+let state = 1;
 let theMessage;
 let thisMessage;
 let thatMessage;
