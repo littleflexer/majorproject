@@ -10,7 +10,10 @@ let choice2;
 let name;
 let trueArray = [];
 let endingsArray = [];
-let state = 1;
+let state;
+let theMessage;
+let thisMessage;
+let thatMessage;
 
 
 
@@ -53,7 +56,7 @@ function setup(){
   let staySafe = ("Nah that sounds stupid and not safe. Harry, Ron and a reluctant Hermione depart to follow Snape. You tell them that you’ll stay watch up here and make sure that nobody goes out of the common room. 20 minutes pass and Lavender Brown comes storming down, “Oh hello USERINPUTNAME. Was that you making all that noise earlier?”  “Yeah sorry, I, um, dropped some books,” You mumble back. “Right, so listen Neville, Dean, Seamus and I are sneaking out tonight. It’s not that I don’t trust you but… Petrificus Totalus!” You collapse to the ground, paralyzed and in shock. Lavender looks at you and says, “It’s not personal. You’ll be fine by morning!” The next day you find out that Lavender overheard Harry, Ron, and Hermione so she snuck out to warn Dumbledore. He was lucky enough to have had time to send help to the three of them and save them from certain death. Your dad is now the potions teacher which is cool,  but incredibly awkward.");
   endingsArray.push(staySafe);
 
-  let standYourGround = ("Hermione pulls out her wand, “Expelliarmus!” Snape’s wand flies away. All this commotion causes the figure to come back, just then Harry collapses in pain. You can no longer hear anything other than the ringing in your ears. Flashes of green fly all around you, then everything goes black. You died.")
+  let standYourGround = ("Hermione pulls out her wand, “Expelliarmus!” Snape’s wand flies away. All this commotion causes the figure to come back, just then Harry collapses in pain. You can no longer hear anything other than the ringing in your ears. Flashes of green fly all around you, then everything goes black. You died.");
   endingsArray.push(standYourGround);
 
   name = prompt("Type in a name");
@@ -62,11 +65,15 @@ function setup(){
 function draw() {
   textSize(15);
   if (state === 2){
-    let thisMessage = trueArray.shift();
-    text(thisMessage, windowWidth, windowHeight/3, 600, 600);
+    let theMessage = trueArray.shift();
+    console.log(thisMessage);
+    text(theMessage, windowWidth, windowHeight/3, 600, 600);
+    endingsArray.shift();
   }
   if (state === 3){
-
+    console.log("over here!");
+    let theMessage = endingsArray.shift();
+    text(theMessage, windowWidth, windowHeight/3, 600, 600);
   }
 }
 
@@ -75,32 +82,16 @@ function keyPressed() {
 }
 
 function makeChoice() {
-  let theMessage;
-  if (key === "1" || keyCode === "97" && state === 2){
-    console.log("here!");
-    let thisMessage = trueArray.shift();
-    text(thisMessage, windowWidth, windowHeight/3, 600, 600);
-    let state === 2;
-  }
-  if (keyCode === "50" || keyCode === "98"){
-
-  }
-  if (key === "r" || key === "R" && state === 1) {
-    let theMessage = "You are ten. Your birthday is in one week. You are out for a walk through the old neighbourhood park. You walk past the usual sites, the rusty bench, the climbing tree, and the old hill. You see the same old familiar faces doing the exact same things over and over again. But today something feels off. Since you are a complete idiot, you keep walking. You keep walking down the path. Your phone buzzes and it’s a text from your mom, Dory Lockhart. hey hun. it’s your turn to clean the dishes tonight. xoxo - mum . it’s a shame your father left her. she’s an incredibly sweet woman. you dont know why your mother refuses to talk about him. you decide not to reflect on your life and you keep walking.  the same old path, but this time with a shiver up your spine. the people you used recognize seem to disappear. you need to find an advantage point and fast. you look to your right and you see the old hill. you go up the hill and you see a grungy old boot. but that’s not why you came here.  so you turn around. there is literally no one left. it’s just you. so you look at the boot. there’s a bright letter beside the boot. it’s addressed to you, strangely. upon opening it, it bursts into the air howling at you. " +  name + " grAb tHat stInky boOT nOw! rigHt noW!! grab the boot 1 or go home 2";
-    text(theMessage, windowWidth/3 , 50, 600, 600);
+  if (key === "1"){
     let state = 2;
+  }
+  if (key === "2"){
+    let state = 3;
+  }
+  if (key === "r" || key === "R") {
+    let theMessage = "You are ten. Your birthday is in one week. You are out for a walk through the old neighbourhood park. You walk past the usual sites, the rusty bench, the climbing tree, and the old hill. You see the same old familiar faces doing the exact same things over and over again. But today something feels off. Since you are a complete idiot, you keep walking. You keep walking down the path. Your phone buzzes and it’s a text from your mom, Dory Lockhart. hey hun. it’s your turn to clean the dishes tonight. xoxo - mum . it’s a shame your father left her. she’s an incredibly sweet woman. you dont know why your mother refuses to talk about him. you decide not to reflect on your life and you keep walking.  the same old path, but this time with a shiver up your spine. the people you used recognize seem to disappear. you need to find an advantage point and fast. you look to your right and you see the old hill. you go up the hill and you see a grungy old boot. but that’s not why you came here.  so you turn around. there is literally no one left. it’s just you. so you look at the boot. there’s a bright letter beside the boot. it’s addressed to you, strangely. upon opening it, it bursts into the air howling at you. " +  name + " grAb tHat stInky boOT nOw! rigHt noW!! grab the boot 1 or go home 2";
+    let state = 2;
+    text(theMessage, windowWidth/3 , 50, 600, 600);
 
   }
-}
-
-function nextPage() {
-
-}
-
-function displayPage(){
-
-}
-
-function reset(){
-
 }
