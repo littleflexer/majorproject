@@ -14,6 +14,7 @@ let state = 1;
 let theMessage;
 let thisMessage;
 let thatMessage;
+let instructions;
 
 
 
@@ -59,6 +60,7 @@ function setup(){
   let standYourGround = ("Hermione pulls out her wand, “Expelliarmus!” Snape’s wand flies away. All this commotion causes the figure to come back, just then Harry collapses in pain. You can no longer hear anything other than the ringing in your ears. Flashes of green fly all around you, then everything goes black. You died.");
   endingsArray.push(standYourGround);
 
+  window.alert("Press r to begin reading. Click 1 for the first choice and 2 for the second choice as the story prompts you to do so.");
   name = prompt("Type in a name");
 }
 
