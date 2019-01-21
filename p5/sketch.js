@@ -3,9 +3,12 @@
 // December-January 21st
 //
 // Extra for Experts:
-// - describe what you did to take this project "above and beyond"
+// - I won't lie there isn't much extra for experts in here. Although I did write a creative story all by hand and I am proud of that.
+// - In hindsight, it would have been better to take an already completed assignment and take it farther. Like Draw Sheldon. I do think that was my best work this semester.
+// - Adding the story into an object would have been clever and I wish I had thought of that earlier. 
+// - Thanks for the semester!
 
-let choice1;
+let choice1;     // These are all the variables and arrays I will be using
 let choice2;
 let name;
 let trueArray = [];
@@ -16,15 +19,13 @@ let thisMessage;
 let thatMessage;
 let instructions;
 
-
-
-function preload(){
+function preload(){      //this loads the images
   choice1 = loadImage("assets/Choice 1.png");
   choice2 = loadImage("assets/Choice 2.png");
 }
 
 
-function setup(){
+function setup(){     //This is where I create the canvas and the two arrays of storylines. After each chapter, I push it into the appropriate array
   createCanvas(windowWidth, windowHeight);
   background(200);
   imageMode(CENTER);
@@ -61,10 +62,10 @@ function setup(){
   endingsArray.push(standYourGround);
 
   window.alert("Press r to begin reading. Click 1 for the first choice and 2 for the second choice as the story prompts you to do so.");
-  name = prompt("Type in a name");
+  name = prompt("Type in a name");    //MY USER INPUT
 }
 
-function draw() {
+function draw() {    // Flip through the story
   textSize(15);
   if (state === 2){
     let theMessage = trueArray.shift();
@@ -79,11 +80,11 @@ function draw() {
   }
 }
 
-function keyPressed() {
+function keyPressed() { //trigger the display of the story
   makeChoice();
 }
 
-function makeChoice() {
+function makeChoice() {  //make choices with buttons 1 and 2 as well as the start up message
   if (key === "1"){
     let state = 2;
   }
